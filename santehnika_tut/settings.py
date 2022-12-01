@@ -87,7 +87,7 @@ FEED_EXPORTERS = {
     'csv': 'scrapy.exporters.CsvItemExporter'
 }
 FEED_FORMAT = 'csv'
-FEED_EXPORT_FIELDS = ["name", "url", "category", "price", "price_with_discount", "old_price", "discount"]
+FEED_EXPORT_FIELDS = ["name", "url", "category", "description"]
 FEED_URI = 'santehnika_tut.csv'
 FEED_EXPORT_ENCODING = 'utf-8'
 
