@@ -1,4 +1,4 @@
-# Scrapy settings for santechnika_tut project
+# Scrapy settings for santehnika_tut project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -49,13 +49,13 @@ MEDIA_ALLOW_REDIRECTS = True
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'santechnika_tut.middlewares.SantechnikaTutSpiderMiddleware': 543,
+#    'santehnika_tut.middlewares.santehnikaTutSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'santechnika_tut.middlewares.SantechnikaTutDownloaderMiddleware': 543,
+#    'santehnika_tut.middlewares.santehnikaTutDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -67,7 +67,7 @@ MEDIA_ALLOW_REDIRECTS = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'santechnika_tut.pipelines.SantechnikaTutPipeline': 300,
+#    'santehnika_tut.pipelines.santehnikaTutPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
