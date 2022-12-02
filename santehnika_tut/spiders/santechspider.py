@@ -38,21 +38,11 @@ class SantechspiderSpider(scrapy.Spider):
         iloader = ItemLoader(item=SantehnikaTutItem(), response=response)
         iloader.add_value('url', response.url)
         iloader.add_xpath('name', "//h1[@itemprop='name']/text()")
-        iloader.add_xpath('description', "//div[@class='content tab_des']/text()") #!!!!!!!!!!!!!!!
-        iloader.add_xpath('category', "(//a[@class='bcsm'])[1]/span/text()")
+        iloader.add_xpath('item_id', "//div[contains(text(), 'Товарный код:')]/text()")
+        iloader.add_xpath('article', "//div[@class='info']//span[contains(text(), 'Артикул:')]/../following-sibling::div[@class='val']/text()")
 
-        # iloader.add_xpath('weight',
-        #                   "//td/span[contains(text(), 'Вес комплекта (кг)')]/parent::*/following-sibling::td[1]/text()")
-        #
-        # iloader.add_xpath('dimensions',
-        #                   "//td/span[contains(text(), 'Габариты упаковки лодки (см.)')]/parent::*/following-sibling::td[1]/text()")
-        #
-        iloader.add_value('first_image_url', [urljoin(self.start_urls[0], i) for i in response.xpath(
-             "//a[(@class='xoverlay' or @class='xoverlay active') and  not(@data-type = 'youtube')]/@href").getall()][0])
-        #
-        # iloader.add_value('image_urls', [urljoin(self.start_urls[0], i) for i in response.xpath(
-        #     "//a[(@class='xoverlay' or @class='xoverlay active') and  not(@data-type = 'youtube')]/@href").getall()])
-        #
-        # iloader.add_value('item_uid', response.url)
+        iloader.add_xpath('description', "//div[@class='content tab_des']/node()")
+        iloader.add_xpath('characteristics', "///ul[@class='chars']/node()")
+        iloader.add_xpath('category', "(//a[@class='bcsm'])[1]/span/text()")
 
         yield iloader.load_item()
