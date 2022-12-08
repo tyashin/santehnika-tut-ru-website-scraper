@@ -5,7 +5,8 @@ name = "pypi"
 
 [packages]
 scrapy = "*"
-beautifulsoup4 = "*"
+pandas = "*"
+xlsxwriter = "*"
 
 [dev-packages]
 
